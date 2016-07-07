@@ -12,11 +12,11 @@
     "url": "https://github.com/sathyashan/movie-ticket-reservation-local-storage.git"
   },
   "keywords": [
-    "movieticket",
+    "movie ticket",
     "angularjs",
-    "ticketReservation",
-    "movieTicketReservation",
-    "LocalStorage"
+    "ticket Reservation",
+    "movie Ticket Reservation",
+    "Local Storage"
   ],
   "author": "Sathya Moorthy",
   "license": "ISC",

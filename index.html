@@ -1,0 +1,85 @@
+<html>
+
+<head>
+    <title>Movie Ticket Reservation</title>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body ng-app="reservationApp" ng-cloak>
+    <div class="mainWrapper centerize" ng-controller="mainCtrl">
+        <div class="title centerize">Movie Ticket Reservation</div>
+        <div class="userInputSection">
+            <div class="nameInputSection">
+                <span class="nameTag">Name</span>
+                <input class="nameInput" ng-model="nameInput" type="text">
+            </div>
+            <div class="numberOfTicketsSection">
+                <span class="numTicketsTag"># of Tickets</span>
+                <input class="numTicketInput" ng-model="numTicketInput" type="number">
+            </div>
+            <div class="btnStartBooking" ng-click="startBooking()">
+                Start Booking
+            </div>
+        </div>
+        <div class="seatingArrangementWrapper centerize" ng-if="isSeatingArrangementVisible">
+            <div class="seatingArrangement" ng-controller="seatCtrl">
+                <div class="widgetsMapping centerize">
+                    <span class="widget seatAvailable"></span>
+                    <span class="WidgetDesc">Seat Available</span>
+                    <span class="widget seatSelected"></span>
+                    <span class="WidgetDesc">Seat Selected</span>
+                    <span class="widget seatReserved"></span>
+                    <span class="WidgetDesc">Seat Reserved</span>
+                </div>
+
+                <div class="screen">
+                    Screen
+                </div>
+
+                <div class="seatNumbersRow">
+                    <span class="seatNumber" ng-repeat="seat in ngRepeatFor(12)">{{seat}}</span>
+                </div>
+                <div class="seatRow" ng-repeat="seatRow in seatRows">
+                    <span class="seatNumber">{{seatRow.seatSerial}}</span>
+                    <span class="seatNumber widget seatAvailable" ng-repeat="seat in ngRepeatFor(12)" ng-class="{seatReserved: checkSelected($index, seatRow.selectedSeats)}"
+                        ng-click="onClickSeat($event, seatRow.seatSerial+($index + 1))"></span>
+                </div>
+                <div class="clearfix">
+                    <div class="btnConfirm" ng-class="{btnDisabled: userSelectedSeats.length < numTicketInput}" ng-click="onClickConfirm()">
+                        Confirm
+                    </div>
+                    <div class="btnToggleHistory" ng-click="toggleHistory()">
+                        {{toggleHistoryText}}
+                    </div>
+                </div>
+                <div class="bookingHistory" ng-show="showHistory">
+                    <table>
+                        <tr>
+                            <th>Name</th>
+                            <th>No. of Seats</th>
+                            <th>Seats</th>
+                        </tr>
+                        <tr ng-repeat="item in bookings">
+                            <td class="name">{{item.name}}</td>
+                            <td class="numSeats">{{item.numSeats}}</td>
+                            <td class="seats">{{item.seats}}</td>
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="toastMessageBox " ng-show="isToastMessageVisible " id="toastMessageBox ">
+            <div class="toast ">{{toastMessage}}</div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js "></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.10/ngStorage.min.js "></script>
+    <script src="app.js "></script>
+</body>
+
+</html>

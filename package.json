@@ -1,0 +1,30 @@
+{
+  "name": "movieticketreservation",
+  "version": "1.0.0",
+  "description": "movie ticket reservation - local storage",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sathyashan/movie-ticket-reservation-local-storage.git"
+  },
+  "keywords": [
+    "movieticket",
+    "angularjs",
+    "ticketReservation",
+    "movieTicketReservation",
+    "LocalStorage"
+  ],
+  "author": "Sathya Moorthy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sathyashan/movie-ticket-reservation-local-storage/issues"
+  },
+  "homepage": "https://github.com/sathyashan/movie-ticket-reservation-local-storage#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}

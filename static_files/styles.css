@@ -1,0 +1,228 @@
+[class^='btn']{
+    cursor: pointer;
+}
+
+.centerize{
+    text-align: center;
+    margin: 0 auto;
+}
+
+[ng\:cloak], [ng-cloak], .ng-cloak {
+  display: none !important;
+}
+
+.toast{
+    cursor: none;
+    right: 100px;
+    bottom: 10px;
+    position: fixed;
+    padding: 8px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    background: #333;
+    color:#FFF;
+    display: inline-block;
+    border-radius: 2px;  
+}
+
+body{
+    background: #FAFAFA;
+    margin: 0px;
+    font-family: "Source Sans", helvetica, arial, sans-serif;
+}
+
+[class$="Tag"]{
+    margin-right: 10px;
+}
+
+.mainWrapper{
+    width: 1024px;
+}
+.userInputSection{
+    margin: 20px 0;
+}
+.nameInputSection, .numberOfTicketsSection{
+    display: inline-block;
+    margin-right: 20px;
+}
+.nameInput, .numTicketInput{
+    width: 150px;
+    border: none;
+    border-bottom: solid 2px #9DACA9;
+    outline: none;
+    padding: 5px;
+    background: #FAFAFA;
+    -webkit-transition: border 0.5s ease;
+    -moz-transition:  border 0.5s ease;
+    transition:  border 0.5s ease;
+}
+
+.nameInput:focus, .numTicketInput:focus{
+    border-bottom-color: #3F51B5;
+}
+
+.numTicketInput{
+    width: 40px;
+    text-align: center;
+}
+
+.btnStartBooking, .btnConfirm, .btnToggleHistory{
+    border: solid 2px #3F51B5;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    color: #3F51B5;
+    background: #FFF;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.btnStartBooking:hover, .btnConfirm:hover, .btnToggleHistory:hover{
+    background: #E8EAF6;
+}
+
+.btnStartBooking:focus, .btnStartBooking:active, .btnConfirm:focus, .btnConfirm:active, .btnToggleHistory:focus, .btnToggleHistory:focus{
+    background: #3F51B5;
+    color: #FFF;
+}
+
+.btnDisabled{
+    cursor: default;
+    background: #bdbdbd;
+    color: #616161;
+    border: solid 2px #616161;
+}
+
+.btnDisabled:hover{
+    background: #bdbdbd;
+}
+
+.btnDisabled:focus, .btnDisabled:active{
+    background: #bdbdbd;
+    color: #616161;
+}
+
+.btnConfirm, .btnToggleHistory{
+    float: right;
+    margin: 20px 10px;
+}
+
+.clearfix::after{
+    display: table;
+    content: "";
+    clear: both;
+    height: 0px;
+    visibility: hidden;
+}
+
+.title{
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+.screen{
+    padding: 10px;
+    margin: 20px;
+    text-transform: uppercase;
+    color: #FFF;
+    background: #3F51B5;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+}
+.widgetsMapping{
+    height: 20px;
+    vertical-align: middle;
+    font-size: 12px;
+}
+.widget{
+    display: inline-block;
+    border: solid 1px #536DFE;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+
+.seatAvailable{
+    background: #FFF;
+}
+
+.seatSelected{
+    background: #4CAF50;
+}
+
+.seatReserved{
+    background: #F44336;
+}
+
+.widgetsMapping .widget{
+    margin-right: 5px;
+}
+
+.widgetsMapping .widgetDesc{
+    margin-right: 20px;
+    vertical-align: middle;
+}
+
+.seatNumber{
+    width: 16px;
+    text-align: center;
+    margin-right: 40px;
+    font-size: 10px;
+    display: inline-block;
+}
+
+.widgetsMapping .widgetDesc:last-child{
+    margin: 0;
+}
+.seatNumber:last-of-type{
+    margin: 0;
+}
+
+.seatingArrangementWrapper{
+    width: 800px;
+}
+.seatingArrangement{
+    text-align: left;
+}
+.seatNumbersRow{
+    margin-left: 60px;
+}
+
+.seatNumbersRow .seatNumber{
+    width: 18px;
+}
+.seatRow{
+    margin-top: 10px;
+}
+.seatRow:nth-last-of-type(4){
+    margin-top: 40px;
+}
+
+.seatRow .widget{
+    cursor: pointer;
+}
+
+.seatRow .seatReserved{
+    cursor: default;
+}
+
+table, th , td  {
+  border: 1px solid grey;
+  border-collapse: collapse;
+  padding: 5px;
+  font-size: 14px;
+}
+table tr:nth-child(odd) {
+  background-color: #f1f1f1;
+}
+table tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+.bookingHistory{
+    margin-bottom: 10px;
+}
